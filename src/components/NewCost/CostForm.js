@@ -27,6 +27,7 @@ const CostForm = (props) => {
     };
 
     props.onSaveCostData(costData);
+    props.onCancel();
 
     setDescription("");
     setAmount("");
@@ -66,6 +67,9 @@ const CostForm = (props) => {
         </div>
         <div className="new-cost__actions">
           <button type="submit">Добавить рассход</button>
+          <button type="button" onClick={props.onCancel}>
+            Отменить
+          </button>
         </div>
       </form>
     </div>
